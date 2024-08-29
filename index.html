@@ -37,12 +37,32 @@
             <a href="#" class="btn btn-outline-dark my-1">About Us</a>
             <a href="#" class="btn btn-outline-dark my-1">Services</a>
             <a href="#" class="btn btn-outline-dark my-1">Contact Us</a>
-            <a href="#" class="btn btn-outline-primary my-1" data-bs-toggle="tooltip" data-bs-placement="right"
-                title="User Settings"><i class="ri-settings-4-line"></i></a>
+           
         </div>
 
         <div class="offcanvas-footer d-flex flex-column p-3">
-            <a href="#" class="btn btn-outline-primary my-1">Log-Out</a>
+            <a href="#" class="btn btn-outline-primary my-1"><i class="ri-settings-4-line"></i></a>
+            <a href="#" class="btn btn-outline-primary my-1" data-bs-toggle="modal" data-bs-target="#logout">Log-Out</a>
+            <div class="modal fade " id="logout">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-primary">Logout</h5>
+                            <button class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body alert-primary">
+                            Confirm You Want To Logout This Account Permanently ?
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-outline-primary" data-bs-target="#exampleModalToggle"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
+                            <button class="btn btn-outline-danger" data-bs-target="#exampleModalToggle"
+                                data-bs-toggle="modal" data-bs-dismiss="modal" onclick="on2()">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <a href="#" class="btn btn-outline-danger my-1" data-bs-toggle="modal" data-bs-target="#delete">Delete
                 Account</a>
             <div class="modal fade " id="delete">
@@ -60,7 +80,7 @@
                             <button class="btn btn-outline-primary" data-bs-target="#exampleModalToggle"
                                 data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
                             <button class="btn btn-outline-danger" data-bs-target="#exampleModalToggle"
-                                data-bs-toggle="modal" data-bs-dismiss="modal" onclick="on()">Confirm</button>
+                                data-bs-toggle="modal" data-bs-dismiss="modal" onclick="on1()">Confirm</button>
                         </div>
                     </div>
                 </div>
@@ -72,8 +92,12 @@
     </div>
 </body>
 <script>
-    function on() {
-        window.alert("account deleted successfully")
+    function on1() {
+        window.alert("account deleted successfully!!")
+    }
+
+    function on2() {
+        window.alert("account logout successfully!!")
     }
 
 </script>
